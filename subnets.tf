@@ -1,6 +1,3 @@
-variable "PUBLIC_SUBNETS_CIDR" {
-  default = ""
-}
 resource "aws_subnet" "public" {
   count             = length(var.PUBLIC_SUBNETS_CIDR)
   vpc_id            = aws_vpc.main.id
@@ -11,9 +8,6 @@ resource "aws_subnet" "public" {
   }
 }
 
-variable "PRIVATE_SUBNETS_CIDR" {
-  default = ""
-}
 resource "aws_subnet" "private" {
   count             = length(var.PRIVATE_SUBNETS_CIDR)
   vpc_id            = aws_vpc.main.id
