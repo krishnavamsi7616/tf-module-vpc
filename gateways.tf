@@ -6,7 +6,6 @@ resource "aws_internet_gateway" "igw" {
   }
 }
 
-
 resource "aws_eip" "ngw" {}
 
 resource "aws_nat_gateway" "ngw" {
